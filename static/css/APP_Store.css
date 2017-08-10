@@ -762,6 +762,10 @@ p {
 .datagrid-row-alt {
     background: #F9F9F9;
 }
+.datagrid-row-selected {
+    background: #c6f3ee;
+    color: #000000;
+}
 .datagrid-row:hover{
     background: #c6f3ee;
 }
