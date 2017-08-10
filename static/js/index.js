@@ -12,6 +12,7 @@ $('#right').width(tableWidth)
 var setting = {
   view: {
     addDiyDom: addDiyDom,
+    dblClickExpand: false,
     fontCss: {color: treeSpan},
     showLine: false,
     showIcon: false
@@ -49,7 +50,7 @@ var setting = {
   }
 }
 function addDiyDom(treeId, treeNode) {
-  if (treeNode.id === '4') {
+    if (treeNode.id === '4') {
     var aObj = $('#' + treeNode.tId)
     var editStr = '<span class="exportIcon" id="word' + treeNode.id + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button word"></span></span>' +
     '<span class="exportIcon" id="excel' + treeNode.id + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button excel"></span></span>'
@@ -60,6 +61,8 @@ function addDiyDom(treeId, treeNode) {
 }
 
 function treeOnClick(event, treeId, treeNode) {
+  var zTree = $.fn.zTree.getZTreeObj("treeDemo")
+  zTree.expandNode(treeNode)
   if (treeNode.id === '2') {
     jghsjwd()
   } else if (treeNode.id === '3') {
