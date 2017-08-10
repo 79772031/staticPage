@@ -350,13 +350,6 @@ p {
     vertical-align: baseline;
 }
 
-.ztree li a.curSelectedNode {
-    padding-top: 0px;
-    background-color: #354a5b;
-    height: 32px;
-    border: 0;
-}
-
 .ztree li span.button.noline_close {
     background: url("../img/treeE.png") no-repeat center center;
 }
@@ -672,7 +665,7 @@ p {
     font-size: 14px;
     padding: 0 6px;
     height: 20px;
-    left: 125px;
+    left: 100px;
     line-height: 20px;
     text-indent: 0;
     text-align: center;
