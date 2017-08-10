@@ -1,0 +1,156 @@
+{"total":12,"rows":[
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"通信地址",
+    "englishAttributeName":"ADDRESS",
+    "dataType":"VC(512)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"排序",
+    "englishAttributeName":"DISPINDEX",
+    "dataType":"INT",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"电子邮箱",
+    "englishAttributeName":"EMAIL",
+    "dataType":"VC(128)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"联系传真",
+    "englishAttributeName":"FAX_NO",
+    "dataType":"VC(16)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"公司ID",
+    "englishAttributeName":"ID",
+    "dataType":"VC(18)",
+    "constraint":"PK",
+    "modality":"A",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"公司级别",
+    "englishAttributeName":"LEVEL",
+    "dataType":"INT",
+    "constraint":"PK",
+    "modality":"S",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"公司名称",
+    "englishAttributeName":"NAME",
+    "dataType":"VC(128)",
+    "constraint":"NOT NULL",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"公司简称",
+    "englishAttributeName":"NAME_ABBREVIATION",
+    "dataType":"VC(64)",
+    "constraint":"NOT NULL",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"拥有者",
+    "englishAttributeName":"OWNER",
+    "dataType":"VC(6)",
+    "constraint":"NOT NULL",
+    "modality":"R",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"上级公司",
+    "englishAttributeName":"PARENT_ID",
+    "dataType":"VC(18)",
+    "constraint":"FK",
+    "modality":"S",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"联系电话",
+    "englishAttributeName":"PHONE_NO",
+    "dataType":"VC(16)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"邮政编码",
+    "englishAttributeName":"POSTCODE",
+    "dataType":"VC(8)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"层级排序代码",
+    "englishAttributeName":"REL_ID",
+    "dataType":"VC(12)",
+    "constraint":"",
+    "modality":"M",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  },
+  {
+    "englishTableName":"SG_ORG_GRIDCOM_",
+    "attributeName":"更新标志",
+    "englishAttributeName":"STAMP",
+    "dataType":"VC(64)",
+    "constraint":"NOT NULL",
+    "modality":"R",
+    "effectiveSign":"Y",
+    "founder":"admin",
+    "createDate":"2017-08-09 15:00:00"
+  }
+]}

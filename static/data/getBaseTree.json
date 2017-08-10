@@ -1,0 +1,6 @@
+[{"id":"1","pId":"0","name":"模型数据查询","open":true,"appIndex":0,"description":"默认父节点","note":null,"imageId":null,"isParent":true},
+{"id":"2","pId":"1","name":"公共数据模型","open":false,"appIndex":1,"note":null,"imageId":null,"isParent":true},
+{"id":"3","pId":"2","name":"组织机构","open":false,"appIndex":2,"note":null,"imageId":null,"isParent":true},
+{"id":"5","pId":"3","name":"电网公司","open":false,"appIndex":2,"note":null,"imageId":null,"isParent":true},
+{"id":"6","pId":"5","name":"电网公司基本信息","open":false,"appIndex":2,"note":null,"imageId":null,"isParent":false},
+{"id":"4","pId":"2","name":"电力设备容器","open":false,"appIndex":3,"note":null,"imageId":null,"isParent":false}]
