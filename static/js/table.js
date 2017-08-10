@@ -452,8 +452,7 @@ function  workLogging(){
         cache:false,
         pagination: true,
         method: 'get',
-        width:"100%",
-        height:538,
+       height:503,
         striped:true,
         columns:[[
             {
@@ -488,7 +487,7 @@ function  workLogging(){
             {
                 field: 'workContent',
                 title: '工作内容',
-                width: 326,
+                width: 361,
                 align: 'center'
             }
         ]]
