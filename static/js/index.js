@@ -4,8 +4,10 @@ layui.use('layer', function () {
   var layer = layui.layer
 })
 
-var treeSpan = '#ffffff', windowHeight = $(window).height(), tabelHeight = windowHeight - 145
+var treeSpan = '#ffffff', windowHeight = $(window).height(), tabelHeight = windowHeight - 145, windowWidth = $(window).width(),
+tableWidth = windowWidth - 279
 $('#children-table').height(tabelHeight)
+$('#right').width(tableWidth)
 
 var setting = {
   view: {

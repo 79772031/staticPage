@@ -155,8 +155,9 @@ p {
 .left {
     height: 100%;
     float: left;
-    width: 18%;
-    background-color: #253b41;
+    /*width: 18%;*/
+    width: 279px;
+    background-color: #273947;
 }
 
 .nav-search {
@@ -250,7 +251,7 @@ p {
 
 .right {
     float: right;
-    width: 82%;
+    /*width: 82%;*/
 }
 
 .right .children-name-container {
