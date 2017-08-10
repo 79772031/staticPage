@@ -284,7 +284,7 @@ function bxxgl(){
 /*属性维护痕迹查看*/
 function sxwhhjck(){
     $('#sxwhhjckDialog').dialog({
-        title: '属性维护痕迹查看',
+        title: '维护痕迹查看',
         width: 800,
         height: 600,
         closed: false,
@@ -296,8 +296,7 @@ function sxwhhjck(){
         cache:false,
         pagination: true,
         method: 'get',
-        width:"100%",
-        height:"100%",
+        height:551,
         striped:true,
         fitColumns:true,
         columns: [[
@@ -365,8 +364,7 @@ function  lsbbck(){
         cache:false,
         pagination: true,
         method: 'get',
-        width:"100%",
-        height:"100%",
+        height:551,
         striped:true,
         columns:[[
             {
@@ -455,7 +453,7 @@ function  workLogging(){
         pagination: true,
         method: 'get',
         width:"100%",
-        height:"90%",
+        height:538,
         striped:true,
         columns:[[
             {
