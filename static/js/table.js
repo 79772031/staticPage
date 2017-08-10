@@ -16,6 +16,7 @@ function sxxxgl(){
         pagination: true,
         method: 'get',
         width:"100%",
+        striped:true,
         height:"100%",
         singleSelect: false,
         fitColumns:true,
@@ -92,6 +93,7 @@ function jghsjwd(){
         width:"100%",
         height:"100%",
         singleSelect: false,
+        striped:true,
         fitColumns:true,
         columns: [[
             {
@@ -140,6 +142,7 @@ function dxxxgl(){
         width:"100%",
         height:"100%",
         singleSelect: false,
+        striped:true,
         fitColumns:true,
         columns: [[
             {
@@ -216,6 +219,7 @@ function bxxgl(){
         height:"100%",
         singleSelect: false,
         fitColumns:true,
+        striped:true,
         columns: [[
             {
                 field: '',
@@ -294,6 +298,7 @@ function sxwhhjck(){
         method: 'get',
         width:"100%",
         height:"100%",
+        striped:true,
         fitColumns:true,
         columns: [[
             {
