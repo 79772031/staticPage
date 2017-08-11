@@ -711,7 +711,7 @@
 }
 .l-btn:hover {
   background: #eaf2ff;
-  color: #000000;
+  color: #333333;
   border: 1px solid #18ab8f;
   filter: none;
 }
@@ -728,7 +728,7 @@
 .l-btn-plain:hover {
   background: #eaf2ff;
   color: #000000;
-  border: 1px solid #b7d2ff;
+  border: 1px solid #18ab8f;
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
@@ -751,7 +751,6 @@
 .l-btn-plain-disabled,
 .l-btn-plain-disabled:hover {
   background: transparent;
-  filter: alpha(opacity=50);
 }
 .l-btn-selected,
 .l-btn-selected:hover {
