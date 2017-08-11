@@ -189,7 +189,7 @@ p {
     border-color: #aeb9c3;
 }
 .search-popover-view .search-bar.active .search-bar-input {
-    color: #aeb9c3;
+    color: #FFFFFF;
 }
 .search-popover-view .search-bar.active .search-bar-icon {
     background: url("../img/ss-b.png") no-repeat center center;
@@ -614,6 +614,7 @@ p {
     line-height:32px;
     color: #ffffff;
     margin-left: 4px;
+    margin-bottom: 2px;
     vertical-align: middle;
     outline: none;
 }
