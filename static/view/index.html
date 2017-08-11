@@ -169,487 +169,480 @@
 
 </div>
 <!-- 	sunJl start -->
-	<!-- 新增对象弹出框开始 -->
-	<div id="dlgAddObj" class="easyui-dialog" title="新增对象"
-		data-options="closed:true,draggable:false" style="width: 565px; height: 340px;top:120px;">
-		<!-- singleSelect:true, 单选框 -->
-		<form id="AddObjForm" method="post" style="width: 550px; height: 280px; ">
-			<table style="border-collapse: separate; border-spacing: 0px 8px;">
-				<tr>
-					<td class="textright pl2"><label>对象类别：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+<!-- 新增对象弹出框开始 -->
+<div id="dlgAddObj" class="easyui-dialog" title="新增对象"
+	 data-options="closed:true,draggable: false" style="width: 565px; height: 340px;top:120px;">
+	<form id="AddObjForm" method="post" style="width: 553px; height: 280px;padding: 0px;margin: 0px;">
+		<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: 0px;">
+			<tr>
+				<td class="textright"><label>对象类别:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入对象类别'"
 						id="objCategory"></td>
-					<td class="textright pl30"><label>对象代码：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl30"><label>对象代码:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入对象代码'"
 						id="objCode"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>中文名称：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>中文名称:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入中文名称'"
 						id="objZnName"></td>
-					<td class="textright pl30"><label>英文名称：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl30"><label>英文名称:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入英文名称'"
 						id="objEnName"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>编码规则：</label></td>
-					<td class="textleft pl10"><select
-						class="easyui-combobox dialog-table-select" id="objCodeRule"
+			</tr>
+			<tr>
+				<td class="textright"><label>编码规则:</label></td>
+				<td class="textleft pl10"><select
+						class="easyui-combobox dialog-table-select176" id="objCodeRule"
 						data-options="panelHeight:'auto',editable:false">
-							<option value="">全部</option>
-							<option value="1">规则啊</option>
-							<option value="2">什么的</option>
-					</select></td>
-					<td class="textright pl30"><label>是否生效：</label></td>
-					<td class="textleft pl10"><select
-						class="easyui-combobox dialog-table-select" id="objEffectDeal"
+					<option value="">全部</option>
+					<option value="1">规则啊</option>
+					<option value="2">什么的</option>
+				</select></td>
+				<td class="textright pl30"><label>是否生效:</label></td>
+				<td class="textright pl10"><select
+						class="easyui-combobox dialog-table-select176" id="objEffectDeal"
 						data-options="panelHeight:'auto',editable:false">
-							<option value="">全部</option>
-							<option value="1">是</option>
-							<option value="0">否</option>
-					</select></td>
-				</tr>
+					<option value="">全部</option>
+					<option value="1">是</option>
+					<option value="0">否</option>
+				</select></td>
+			</tr>
 
-				<tr>
-					<td class="textright pl2"><label>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明：<br><br><br><br><br></label></td>
-					<td colspan="5" class="textleft pl10"><input id="objDetail"
-						class="easyui-textbox" type="text" data-options="multiline:true,prompt:'请输入对象说明'"
-						style="width: 440px; height: 100px;"></td>
-				</tr>
-				<tr>
-					<td colspan="4" class="textcenter lh30">
-						<button type="button" class="for-easyui-button" style="margin-top: 15px;"
+			<tr>
+				<td class="textright"><label>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明:<br><br><br><br><br></label></td>
+				<td colspan="3" class="textleft pl10"><input id="objDetail"
+															 class="easyui-textbox" type="text" data-options="multiline:true,prompt:'请输入对象说明'"
+															 style="width: 460px; height: 100px;"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="textcenter lh30">
+					<button type="button" class="for-easyui-button"
 							onclick="saveAddObj()">保存</button>
-					</td>
-				</tr>
-			</table>
-		</form>
-	</div>
-	<!-- 新增对象弹出框结束 -->
-	
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 新增对象弹出框结束 -->
+
+
 <!-- 新增表信息管理弹出框开始 -->
-	<div id="dlgAddTableInfo" class="easyui-dialog" title="表信息管理"
-		data-options="closed:true,draggable:false" style="width: 565px; height: 340px;top:120px;">
-		<!-- singleSelect:true, 单选框 -->
-		<form id="tableInfoForm" method="post" style="width: 550px; height: 280px; ">
-			<table style="border-collapse: separate; border-spacing: 0px 8px;">
-				<tr>
-					<td class="textright pl2"><label>对象代码：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+<div id="dlgAddTableInfo" class="easyui-dialog" title="表信息管理"
+	 data-options="closed:true" style="width: 565px; height: 340px;top:120px;">
+	<form id="tableInfoForm" method="post" style="width: 553px; height: 280px;padding: 0px;margin: 0px;">
+		<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: 0px;">
+			<tr>
+				<td class="textright"><label>对象代码:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入对象代码'"
 						id="infoObjCode"></td>
-					<td class="textright pl10"><label>中文表名：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl10"><label>中文表名:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入中文表名'"
 						id="infoChExpress"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>英文表名：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>英文表名:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入英文表名'"
 						id="infoEnExpress"></td>
-					<td class="textright pl30"><label>生效标志：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl30"><label>生效标志:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入生效标志'"
 						id="infoSign"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>创&nbsp;&nbsp;建&nbsp;&nbsp;人：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>创&nbsp; 建 &nbsp;人:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入创建人'"
 						id="infoCreateMan"></td>
-					<td class="textright pl30"><label>创建时间：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-datebox dialog-table-input" type="text"
+				<td class="textright pl30"><label>创建时间:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-datebox dialog-table-input173" type="text"
 						data-options="prompt:'请选择创建时间'"
 						id="infoCreateTime"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明：<br><br><br><br><br></label></td>
-					<td colspan="5" class="textleft pl10"><input id="infoDetail"
-						class="easyui-textbox" type="text" data-options="multiline:true,prompt:'请输入表说明'"
-						style="width: 440px; height: 100px;"></td>
-				</tr>
-				<tr>
-					<td colspan="4" class="textcenter lh30">
-						<button type="button" class="for-easyui-button" style="margin-top: 15px;"
+			</tr>
+			<tr>
+				<td class="textright"><label>说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明:<br><br><br><br><br></label></td>
+				<td colspan="5" class="textleft pl10"><input id="infoDetail"
+															 class="easyui-textbox" type="text" data-options="multiline:true,prompt:'请输入表说明'"
+															 style="width: 458px; height: 100px;"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="textcenter lh30">
+					<button type="button" class="for-easyui-button"
 							onclick="saveAddTableInfo()">保存</button>
-					</td>
-				</tr>
-			</table>
-		</form>
-	</div>
-	<!-- 新增表信息管理弹出框结束 -->
-	
-	<!-- 新增属性信息管理弹出框开始 -->
-	<div id="dlgAddAttribute" class="easyui-dialog" title="属性信息管理"
-		data-options="closed:true,draggable:false" style="width: 565px; height: 270px;top:120px;">
-		<!-- singleSelect:true, 单选框 -->
-		<form id="AttributeForm" method="post" style="width: 550px; height: 210px; ">
-			<table style="border-collapse: separate; border-spacing: 0px 8px;">
-				<tr>
-					<td class="textright pl2"><label>英文表名：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 新增表信息管理弹出框结束 -->
+
+<!-- 新增属性信息管理弹出框开始 -->
+<div id="dlgAddAttribute" class="easyui-dialog" title="属性信息管理"
+	 data-options="closed:true" style="width: 565px; height: 280px;top:120px;">
+	<!-- singleSelect:true, 单选框 -->
+	<form id="AttributeForm" method="post"  style="width: 553px; height: 210px;padding: 0px;margin: 0px;">
+		<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: 0px;">
+			<tr>
+				<td class="textright"><label>英文表名:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入英文表名'"
 						id="attrEnTableName"></td>
-					<td class="textright pl10"><label>英文属性名：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl10"><label>英文属性名:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入英文属性名'"
 						id="attrEnName"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>属&nbsp;&nbsp;性&nbsp;&nbsp;名：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>属&nbsp;&nbsp;性&nbsp;&nbsp;名:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入属性名'"
 						id="attrName"></td>
-					<td class="textright pl30"><label>数据类型：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl30"><label>数据类型:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入英文数据类型'"
 						id="attrDataType"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>约束条件：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>约束条件:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入约束条件'"
 						id="attrConsCondition"></td>
-					<td class="textright pl30"><label>产生形式：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+				<td class="textright pl30"><label>产生形式:</label></td>
+				<td class="textright pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入产生形式'"
 						id="attrProduce"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>生效标志：</label></td>
-					<td class="textleft pl10"><input
-						class="easyui-textbox dialog-table-input" type="text"
+			</tr>
+			<tr>
+				<td class="textright"><label>生效标志:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input173" type="text"
 						data-options="prompt:'请输入生效标志'"
 						id="attrSign"></td>
-				</tr>
-				<tr>
-					<td colspan="4" class="textcenter lh30">
-						<button type="button" class="for-easyui-button" style="margin-top: 15px;"
+			</tr>
+			<tr>
+				<td colspan="4" class="textcenter lh30">
+					<button type="button" class="for-easyui-button" style="margin-top: 12px;"
 							onclick="closeAddAttribute()">保存</button>
-					</td>
-				</tr>
-			</table>
-		</form>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 新增属性信息管理弹出框结束 -->
+<!-- 提示285-200开始  不一致 -->
+<div id="dlgPromptAtypism" class="easyui-dialog" title="提示"
+	 data-options="closed:true" style="width: 285px; height: 200px;">
+	<div class="textright mr76 lh37">
+		<label class="bold-size16">&nbsp;&nbsp;对象不一致<span
+				class="borderbottom">&nbsp;10&nbsp;</span>个
+		</label>
 	</div>
-	<!-- 新增属性信息管理弹出框结束 -->
-	
-	<!-- 提示285-200开始  不一致 -->
-	<div id="dlgPromptAtypism" class="easyui-dialog" title="提示"
-		data-options="closed:true" style="width: 285px; height: 200px;">
-		<div class="textright mr70 lh37">
-			<label class="bold-size16">&nbsp;&nbsp;对象不一致<span
+	<div class="textright mr76 lh37">
+		<label class="bold-size16">&nbsp;&nbsp;表不一致<span
 				class="borderbottom">&nbsp;10&nbsp;</span>个
-			</label>
-		</div>
-		<div class="textright mr70 lh37">
-			<label class="bold-size16">&nbsp;&nbsp;表不一致<span
+		</label>
+	</div>
+	<div class="textright mr76 lh36">
+		<label class="bold-size16">&nbsp;&nbsp;属性不一致<span
 				class="borderbottom">&nbsp;10&nbsp;</span>个
-			</label>
-		</div>
-		<div class="textright mr70 lh36">
-			<label class="bold-size16">&nbsp;&nbsp;属性不一致<span
-				class="borderbottom">&nbsp;10&nbsp;</span>个
-			</label>
-		</div>
-		<div class="textcenter lh30">
-			<button type="button" class="for-easyui-button"
+		</label>
+	</div>
+	<div class="textcenter lh30">
+		<button type="button" class="for-easyui-button"
 				onclick="atypismSure()">确定</button>
-		</div>
 	</div>
+</div>
 
 
-	<!-- 提示285-200开始  是否删除 -->
-	<div id="dlgPromptDel" class="easyui-dialog" title="提示"
-		data-options="closed:true" style="width: 285px; height: 200px;">
-		<div class="textcenter lh110">
-			<img src="../img/垃圾桶.png" style="margin-top: -6px;"></img><label
-				class="bold-size16">&nbsp;&nbsp;是否确定删除？</label>
-		</div>
-		<div class="textcenter lh30">
-			<button type="button" class="for-easyui-button"
+<!-- 提示285-200开始  是否删除 -->
+<div id="dlgPromptDel" class="easyui-dialog" title="提示"
+	 data-options="closed:true" style="width: 285px; height: 200px;">
+	<div class="textcenter lh110">
+		<img src="../img/垃圾桶.png" style="margin-top: -6px;"></img><label
+			class="bold-size16">&nbsp;&nbsp;是否确定删除？</label>
+	</div>
+	<div class="textcenter lh30">
+		<button type="button" class="for-easyui-button"
 				onclick="deleteSure()">确定</button>
-		</div>
 	</div>
-	<!-- 提示285-200结束  是否删除 -->
+</div>
+<!-- 提示285-200结束  是否删除 -->
 
-	<!-- 提示285-200开始  创建成功 -->
-	<div id="dlgPromptCreate" class="easyui-dialog" title="提示"
-		data-options="closed:true" style="width: 285px; height: 200px;">
-		<div style="text-align: center; line-height: 110px;">
-			<img src="../img/创建成功.png" style="margin-top: -6px;"></img><label
-				class="bold-size16">&nbsp;&nbsp;创建成功</label>
-		</div>
-		<div class="textcenter lh30">
-			<button type="button" class="for-easyui-button"
+<!-- 提示285-200开始  创建成功 -->
+<div id="dlgPromptCreate" class="easyui-dialog" title="提示"
+	 data-options="closed:true" style="width: 285px; height: 200px;">
+	<div style="text-align: center; line-height: 110px;">
+		<img src="../img/创建成功.png" style="margin-top: -6px;"></img><label
+			class="bold-size16">&nbsp;&nbsp;创建成功</label>
+	</div>
+	<div class="textcenter lh30">
+		<button type="button" class="for-easyui-button"
 				onclick="gotoPublish()">前往发布</button>
-		</div>
 	</div>
-	<!-- 提示285-200结束  创建成功 -->
+</div>
+<!-- 提示285-200结束  创建成功 -->
 
-	<!-- 提示255-155开始 请至少选择一条记录 -->
-	<div id="dlgPromptChoice" class="easyui-dialog" title="提示"
-		data-options="closed:true" style="width: 255px; height: 155px;">
-		<div class="textcenter lh70">
-			<img src="../img/至少选择.png" style="margin-top: -6px;"></img> <label
-				class="bold-size16">&nbsp;&nbsp;请至少选择一条记录!</label>
-		</div>
-		<div class="textcenter lh30">
-			<button type="button" class="for-easyui-button"
+<!-- 提示255-155开始 请至少选择一条记录 -->
+<div id="dlgPromptChoice" class="easyui-dialog" title="提示"
+	 data-options="closed:true" style="width: 255px; height: 155px;">
+	<div class="textcenter lh70">
+		<img src="../img/至少选择.png" style="margin-top: -6px;"></img> <label
+			class="bold-size16">&nbsp;&nbsp;请至少选择一条记录!</label>
+	</div>
+	<div class="textcenter lh30">
+		<button type="button" class="for-easyui-button"
 				onclick="closePromptChoice()">知道了</button>
-		</div>
 	</div>
-	<!-- 提示255-155 结束 请至少选择一条记录 -->
+</div>
+<!-- 提示255-155 结束 请至少选择一条记录 -->
 
-	<!-- 提示255-155开始 操作失败 -->
-	<div id="dlgPromptFail" class="easyui-dialog" title="提示"
-		data-options="closed:true" style="width: 255px; height: 155px;">
-		<div class="textcenter lh70">
-			<img src="../img/操作失败.png" style="margin-top: -6px;"></img> <label
-				class="bold-size16">&nbsp;&nbsp;操作失败</label>
-		</div>
-		<div class="textcenter lh30">
-			<button type="button" class="for-easyui-button"
+<!-- 提示255-155开始 操作失败 -->
+<div id="dlgPromptFail" class="easyui-dialog" title="提示"
+	 data-options="closed:true" style="width: 255px; height: 155px;">
+	<div class="textcenter lh70">
+		<img src="../img/操作失败.png" style="margin-top: -6px;"></img> <label
+			class="bold-size16">&nbsp;&nbsp;操作失败</label>
+	</div>
+	<div class="textcenter lh30">
+		<button type="button" class="for-easyui-button"
 				onclick="closePromptFail()">知道了</button>
-		</div>
 	</div>
-	<!-- 提示255-155 结束  操作失败 -->
-	<!--        右悬浮的 新增意见反馈 -->
-	<div id="dlginsert" class="easyui-dialog" title="新增意见反馈"
-		data-options="closed:true,draggable:false" style="width: 670px; height: 300px;top:120px;">
-		<div style="margin: 0; padding: 0;">
-			<form id="InsertFeedBack" method="post">
-				<table style="border-collapse: separate; border-spacing: 0px 8px;">
-					<tr>
-						<td class="textright pl2"><label>影响等级：</label></td>
-						<td class="textleft pl10"><select
-							data-options="panelHeight:'auto',editable:false"
-							class="easyui-combobox dialog-table-select103">
-								<option value="">全部</option>
-								<option value="1">严重</option>
-								<option value="2">一般</option>
-								<option value="3">轻微</option>
-						</select></td>
-					</tr>
-					<tr>
-						<td class="textright pl2"><div>问题描述：<br><br><br><br><br></div></td>
-						<td class="textleft pl10" colspan="7"><input
-							class="easyui-textbox" type="text"
-							style="width: 557px; height: 100px;"
-							data-options="multiline:true,prompt:'请输入您要描述的问题'"></td>
-					</tr>
-					<tr>
-						<td class="textright pl2"><label>反馈人：</label></td>
-						<td class="textleft pl10"><input data-options="prompt:'请输入反馈人'"
-							class="easyui-textbox dialog-table-input100" type="text"></td>
-						<td class="textright pl30"><label>反馈单位：</label></td>
-						<td class="textleft pl10"><input data-options="prompt:'请输入反馈单位'"
-							class="easyui-textbox dialog-table-input100" type="text"></td>
-						<td class="textright pl30"><label>反馈时间：</label></td>
-						<td class="textleft pl10"><input id="addQuestionTime"
-							class="easyui-datebox dialog-table-input110" type="text"></td>
-					</tr>
-					<tr>
-						<td colspan="6" style="text-align: center;">
-							<button type="button" class="for-easyui-button"
-								style="margin-top: 10px;" onclick="saveAction()">提交</button>
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
-	</div>
-	<!-- 右悬浮的 新增意见反馈统计弹出框结尾 -->
+</div>
+<!-- 提示255-155 结束  操作失败 -->
+<!--        右悬浮的 新增意见反馈 -->
+<div id="dlginsert" class="easyui-dialog" title="意见反馈"
+	 data-options="closed:true" style="width: 750px; height: 310px;top:120px;">
+	<form id="InsertFeedBack" method="post" style="width: 738px; height: 250px;padding: 0px;margin: 0px;">
+		<table style="border-collapse: separate; border-spacing: 0px 8px;padding: 0px;margin: 0px auto;">
+			<tr>
+				<td class="textright"><label>影响等级:</label></td>
+				<td class="textleft pl10"><select
+						data-options="panelHeight:'auto',editable:false"
+						class="easyui-combobox dialog-table-select144">
+					<option value="1">严重</option>
+					<option value="2">一般</option>
+					<option value="3">轻微</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="textright"><div>问题描述:<br><br><br><br><br></div></td>
+				<td class="textleft pl10" colspan="7"><input
+						class="easyui-textbox" type="text"
+						style="width: 645px; height: 100px;"
+						data-options="multiline:true,prompt:'请输入您要描述的问题'"></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>反&nbsp;&nbsp;馈&nbsp;&nbsp;人:</label></td>
+				<td class="textleft pl10"><input data-options="prompt:'请输入反馈人'"
+												 class="easyui-textbox dialog-table-input142" type="text"></td>
+				<td class="textright pl30"><label>反馈单位:</label></td>
+				<td class="textleft pl10"><input data-options="prompt:'请输入反馈单位'"
+												 class="easyui-textbox dialog-table-input142" type="text"></td>
+				<td class="textright pl30"><label>反馈时间:</label></td>
+				<td class="textleft pl10"><input id="addQuestionTime"
+												 class="easyui-datebox dialog-table-input142" type="text"></td>
+			</tr>
+			<tr>
+				<td colspan="6" style="text-align: center;">
+					<button type="button" class="for-easyui-button"
+							style="margin-top: 12px;" onclick="">提交</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 右悬浮的 新增意见反馈统计弹出框结尾 -->
 
 
 <!--    上面删除按钮旁边的 意见反馈按钮 新增意见反馈 -->
 <div id="dlgfeedback" class="easyui-dialog" title="意见反馈"
-	 data-options="closed:true,draggable:false" style="width: 670px; height: 520px;top:120px;">
+	 data-options="closed:true" style="width: 670px; height: 540px;top:120px;">
+	<form id="feedBackForm" method="post" style="width: 655px; height: 460px;margin: 0px auto;padding: 0px;">
+		<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: 0px;">
+			<tr>
+				<td class="textright"><label>问题分类:</label></td>
+				<td class="textleft pl10"><select disabled="disabled"
+												  data-options="panelHeight:'auto',editable:false"
+												  class="easyui-combobox dialog-table-select229">
+					<option value="">全部</option>
+				</select></td>
+				<td class="textright pl10"><label>重要级别:</label></td>
+				<td class="textleft pl10"><select disabled="disabled"
+												  data-options="panelHeight:'auto',editable:false"
+												  class="easyui-combobox dialog-table-select229">
+					<option value="">全部</option>
+					<option value="1">严重</option>
+					<option value="2">一般</option>
+					<option value="3">轻微</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>分册名称:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+				<td class="textright pl30"><label>对象分类:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>中文表名:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+				<td class="textright pl30"><label>英文表名:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>字段名称:<br><br><br><br><br></label></td>
+				<td colspan="5" class="textleft pl10">
+					<div  style="width: 564px; height: 100px;border: 1px solid #cccccc">
+						<table  style="border-collapse: separate; border-spacing: 0px 0px;">
+							<tr>
+								<td class="labelwidth"><label><input type="checkbox">通信地址</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">排序</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">电子邮件</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">联系传真</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">公司ID</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="labelwidth"><label><input type="checkbox">公司级别</label>
+								</td>
+								<td class="labelwidth">	<label><input type="checkbox">公司名称</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">公司简称</label>
+								</td>
+								<td class="labelwidth">	<label><input type="checkbox">拥有者</label>
+								</td>
+								<td class="labelwidth">	<label><input type="checkbox">上级公司</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="labelwidth"><label><input type="checkbox">联系电话</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">邮政编码</label>
+								</td>
+								<td class="labelwidth"><label><input type="checkbox">更新标志</label>
+								</td>
+								<td class="labelwidth" colspan="2"><label><input type="checkbox">层级排序代码</label>
+								</td>
+							</tr>
+						</table>
+					</div></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>问题描述:<br><br><br><br><br></label></td>
+				<td colspan="5" class="textleft pl10"><input
+						class="easyui-textbox" type="text" data-options="multiline:true"
+						style="width: 565px; height: 100px;"></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>反馈单位:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+				<td class="textright pl30"><label>反馈人:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-textbox dialog-table-input226" type="text"></td>
+			</tr>
+			<tr>
+				<td class="textright"><label>反馈时间:</label></td>
+				<td class="textleft pl10"><input
+						class="easyui-datebox dialog-table-input226" type="text"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="textcenter lh30">
+					<button type="button" class="for-easyui-button" style="margin-top: 15px;"
+							onclick="closeFeedBack()">保存</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- 上面删除按钮旁边的 意见反馈按钮 新增意见反馈统计弹出框结尾 -->
+
+<!-- 意见反馈列表弹出框开始 -->
+<div id="dlgList" class="easyui-dialog" title="意见反馈"
+	 data-options="closed:true" style="width: 740px; height: 460px;top:120px;">
 	<div style="margin: 0; padding: 0;">
-		<form id="feedBackForm" method="post">
-			<table style="border-collapse: separate; border-spacing: 0px 8px;">
+		<form id="ffList" method="post" style="margin: 0px auto;padding: 0px;"
+			  action="/SimpleProject/feedback/exportData">
+			<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: auto;">
 				<tr>
-					<td class="textright pl2"><label>问题分类：</label></td>
-					<td class="textleft pl10"><select disabled="disabled"
-							data-options="panelHeight:'auto',editable:false"
-							class="easyui-combobox dialog-table-input210">
-						<option value="">全部</option>
-					</select></td>
-					<td class="textright pl10"><label>重要级别：</label></td>
-					<td class="textleft pl10"><select disabled="disabled"
-							data-options="panelHeight:'auto',editable:false"
-							class="easyui-combobox dialog-table-input210">
+					<td class="textright"><label>影响等级：</label></td>
+					<td class="textleft pl10"><select
+							class="easyui-combobox dialog-table-select134">
 						<option value="">全部</option>
 						<option value="1">严重</option>
 						<option value="2">一般</option>
 						<option value="3">轻微</option>
 					</select></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>分册名称：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
-					<td class="textright pl30"><label>对象分类：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>中文表名：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
-					<td class="textright pl30"><label>英文表名：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>字段名称：<br><br><br><br><br></label></td>
-					<td colspan="5" class="textleft pl10">
-						<div  style="width: 540px; height: 100px;border: 1px solid #cccccc">
-							<table  style="border-collapse: separate; border-spacing: 0px 0px;">
-								<tr>
-									<td class="labelwidth"><label><input type="checkbox">通信地址</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">排序</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">电子邮件</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">联系传真</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">公司ID</label>
-									</td>
-								</tr>
-								<tr>
-									<td class="labelwidth"><label><input type="checkbox">公司级别</label>
-									</td>
-									<td class="labelwidth">	<label><input type="checkbox">公司名称</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">公司简称</label>
-									</td>
-									<td class="labelwidth">	<label><input type="checkbox">拥有者</label>
-									</td>
-									<td class="labelwidth">	<label><input type="checkbox">上级公司</label>
-									</td>
-								</tr>
-								<tr>
-									<td class="labelwidth"><label><input type="checkbox">联系电话</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">邮政编码</label>
-									</td>
-									<td class="labelwidth"><label><input type="checkbox">更新标志</label>
-									</td>
-									<td class="labelwidth" colspan="2"><label><input type="checkbox">层级排序代码</label>
-									</td>
-								</tr>
-							</table>
-						</div></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>问题描述：<br><br><br><br><br></label></td>
-					<td colspan="5" class="textleft pl10"><input
-																 class="easyui-textbox" type="text" data-options="multiline:true"
-																 style="width: 543px; height: 100px;"></td>
-				</tr>
-				<tr>
-					<td class="textright pl2"><label>反馈单位：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
 					<td class="textright pl30"><label>反馈人：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-textbox dialog-table-input210" type="text"></td>
+					<td class="textleft pl10"><input data-options="prompt:'请输入反馈人'"
+													 class="easyui-textbox dialog-table-input131" type="text"></td>
+					<td class="textright pl30"><label>反馈单位：</label></td>
+					<td class="textleft pl10"><input data-options="prompt:'请输入反馈单位'"
+													 class="easyui-textbox dialog-table-input131" type="text"></td>
 				</tr>
 				<tr>
-					<td class="textright pl2"><label>反馈时间：</label></td>
-					<td class="textleft pl10"><input
-							class="easyui-datebox dialog-table-input210" type="text"></td>
-				</tr>
-				<tr>
-					<td colspan="4" class="textcenter lh30">
-						<button type="button" class="for-easyui-button" style="margin-top: 15px;"
-								onclick="closeFeedBack()">保存</button>
+					<td class="textright"><label>反馈时间：</label></td>
+					<td colspan="3" class="textleft pl10"><input id="questionStartTime"
+																 class="easyui-datebox dialog-table-input131" value="0001-01-01"><label class="textleft pl10 pr5" style="margin-right: 0px;">至</label>
+						<input class="easyui-datebox dialog-table-input131" id="questionEndTime"
+							   value="9999-12-31"></td>
+					<td colspan="2" style="text-align: right;">
+						<button type="button" style="margin-right: 4px;" onclick=""
+								class="for-easyui-button">查询</button>
+						<button type="submit" class="for-easyui-button">导出</button>
 					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
-</div>
-<!-- 上面删除按钮旁边的 意见反馈按钮 新增意见反馈统计弹出框结尾 -->
-
-	<!-- 意见反馈列表弹出框开始 -->
-	<div id="dlgList" class="easyui-dialog" title="意见反馈"
-		data-options="closed:true,draggable:false" style="width: 670px; height: 450px;top:120px;">
-		<div style="margin: 0; padding: 0;">
-			<form id="ffList" method="post"
-				action="/SimpleProject/feedback/exportData">
-				<table style="border-collapse: separate; border-spacing: 0px 8px;">
-					<tr>
-						<td class="textright pl2"><label>影响等级：</label></td>
-						<td class="textleft pl10"><select
-							class="easyui-combobox dialog-table-select103">
-								<option value="">全部</option>
-								<option value="1">严重</option>
-								<option value="2">一般</option>
-								<option value="3">轻微</option>
-						</select></td>
-						<td class="textright pl30"><label>反馈人：</label></td>
-						<td class="textleft pl10"><input data-options="prompt:'请输入反馈人'"
-							class="easyui-textbox dialog-table-input100" type="text"></td>
-						<td class="textright pl30"><label>反馈单位：</label></td>
-						<td class="textleft pl10"><input data-options="prompt:'请输入反馈单位'"
-							class="easyui-textbox dialog-table-input125" type="text"></td>
-					</tr>
-					<tr>
-						<td class="textright pl2"><label>反馈时间：</label></td>
-						<td colspan="3" class="textleft pl10"><input id="questionStartTime"
-							class="easyui-datebox dialog-table-input135" value="0001-01-01"><label class="textleft pl10 pr5" style="margin-right: 0px;">至</label>
-							<input class="easyui-datebox dialog-table-input135" id="questionEndTime"
-							value="9999-12-31"></td>
-						<td colspan="2" style="text-align: right;">
-							<button type="button" style="margin-right: 4px;" onclick=""
-								class="for-easyui-button">查询</button>
-							<button type="submit" class="for-easyui-button">导出</button>
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
-		<div class="pl2 dialog_table_for_index">
-			<table class="easyui-datagrid" id="dgListFeedBack"
-				data-options="fitColumns:true" style="width: 655px; height: 315px;">
-				<thead>
-					<tr>
-						<th
-							data-options="field:'xh',width:45,align:'center',formatter:formatterIndex">序号</th>
-						<th data-options="field:'data1',width:100">问题描述</th>
-						<th data-options="field:'data2',width:60">影响等级</th>
-						<th data-options="field:'data3',width:60">反馈人</th>
-						<th data-options="field:'data4',width:80">反馈单位</th>
-						<th data-options="field:'data5',width:60">反馈时间</th>
-					</tr>
-				</thead>
-			</table>
-		</div>
+	<div class="pl3 dialog_table_for_index" style="margin: 0px auto">
+		<table class="easyui-datagrid" id="dgListFeedBack"
+			   data-options="striped:true,fitColumns:true" style="width: 720px; height: 314px;">
+			<thead>
+			<tr>
+				<th
+						data-options="field:'xh',width:45,align:'center',formatter:formatterIndex">序号</th>
+				<th data-options="field:'data1',width:100">问题描述</th>
+				<th data-options="field:'data2',width:60">影响等级</th>
+				<th data-options="field:'data3',width:60">反馈人</th>
+				<th data-options="field:'data4',width:80">反馈单位</th>
+				<th data-options="field:'data5',width:60">反馈时间</th>
+			</tr>
+			</thead>
+		</table>
 	</div>
-	<!-- 意见反馈列表弹出框结尾 -->
+</div>
+<!-- 意见反馈列表弹出框结尾 -->
 	<!-- sunJL end -->
 <!-- 右侧浮动开始 -->
 <div class="elevator" style="height: 50px;">
