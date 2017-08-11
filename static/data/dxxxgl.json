@@ -88,14 +88,5 @@
     "effectiveSign":"Y",
     "accountfor":"",
     "category":"ORG"
-  },
-  {
-    "objectCoding":"0061",
-    "objectChineseName":"人员",
-    "objectEnglishName":"EMPLOYEE",
-    "codingRule":"4",
-    "effectiveSign":"Y",
-    "accountfor":"",
-    "category":"ORG"
   }
 ]}
