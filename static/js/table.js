@@ -297,7 +297,7 @@ function sxwhhjck(){
         cache:false,
         pagination: true,
         method: 'get',
-        height:551,
+        height:542,
         striped:true,
         fitColumns:true,
         columns: [[
@@ -366,7 +366,7 @@ function  lsbbck(){
         cache:false,
         pagination: true,
         method: 'get',
-        height:551,
+        height:542,
         striped:true,
         columns:[[
             {
@@ -388,7 +388,7 @@ function  lsbbck(){
             {
                 field: 'attributeName',
                 title: '属性名',
-                width: 120,
+                width: 118,
                 align: 'center'
             },
             {
@@ -454,7 +454,7 @@ function  workLogging(){
         cache:false,
         pagination: true,
         method: 'get',
-       height:503,
+       height:510,
         striped:true,
         columns:[[
             {
