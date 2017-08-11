@@ -7,5 +7,14 @@
     "accountfor":"12",
     "founder":"ADMIN",
     "createDate":"2016-09-30 00:00:00"
+  },
+  {
+    "objectCoding":"0010",
+    "tableChineseName":"电网公司基本信息",
+    "tableEnglishName":"SG_ORG_GRIDCOM_BASIC",
+    "effectiveSign":"Y",
+    "accountfor":"12",
+    "founder":"ADMIN",
+    "createDate":"2016-09-30 00:00:00"
   }
 ]}
