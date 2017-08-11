@@ -375,7 +375,6 @@ function  lsbbck(){
                 width: 40,
                 align: 'center',
                 formatter: function (value, row, index) {
-
                     return index + 1
                 }
             },
@@ -464,7 +463,6 @@ function  workLogging(){
                 width: 40,
                 align: 'center',
                 formatter: function (value, row, index) {
-
                     return index + 1
                 }
             },
@@ -490,7 +488,7 @@ function  workLogging(){
             {
                 field: 'workContent',
                 title: '工作内容',
-                width: 361,
+                width: 360,
                 align: 'center'
             }
         ]]
