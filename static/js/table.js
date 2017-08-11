@@ -454,7 +454,7 @@ function  workLogging(){
         cache:false,
         pagination: true,
         method: 'get',
-       height:503,
+       height:510,
         striped:true,
         columns:[[
             {
