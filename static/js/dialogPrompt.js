@@ -250,7 +250,7 @@ $('#addQuestionTime').datebox(
 }
 
 //新增对象 的编辑按钮点击事件
-function updateObj(){
+function updateObj(){//判断没有选择弹出至少选择一个提示框
     var a = $('#sxxxgl').datagrid('getChecked');
     if (a.length < 1) {
         $("#dlgPromptChoice").dialog("open");
@@ -261,7 +261,7 @@ function updateObj(){
     }
 }
 //新增 的编辑按钮点击事件
-function updateTableInfo(){
+function updateTableInfo(){//判断没有选择弹出至少选择一个提示框
     var a = $('#sxxxgl').datagrid('getChecked');
     if (a.length < 1) {
         $("#dlgPromptChoice").dialog("open");
@@ -272,7 +272,7 @@ function updateTableInfo(){
     }
 }
 //新增属性信息 的编钮点击事件
-function updateAttr(){
+function updateAttr(){//判断没有选择弹出至少选择一个提示框
     var a = $('#sxxxgl').datagrid('getChecked');
     if (a.length < 1) {
         $("#dlgPromptChoice").dialog("open");
@@ -285,35 +285,38 @@ function updateAttr(){
 
 
 //新增对象 的删除按钮点击事件
-function delectObj(){
+function delectObj(){//判断没有选择弹出至少选择一个提示框
     var a = $('#sxxxgl').datagrid('getChecked');
     if (a.length < 1) {
         $("#dlgPromptChoice").dialog("open");
         return;
     }
     else{
+        //是否确认删除弹出框
         openPromptDel();
     }
 }
 //新增 的删除按钮点击事件
 function delectTableInfo(){
     var a = $('#sxxxgl').datagrid('getChecked');
-    if (a.length < 1) {
+    if (a.length < 1) {//判断没有选择弹出至少选择一个提示框
         $("#dlgPromptChoice").dialog("open");
         return;
     }
     else{
+        //是否确认删除弹出框
         openPromptDel() ;
     }
 }
 //新增属性信息 的删除按钮点击事件
 function delectAttr(){
     var a = $('#sxxxgl').datagrid('getChecked');
-    if (a.length < 1) {
+    if (a.length < 1) { //判断没有选择弹出至少选择一个提示框
         $("#dlgPromptChoice").dialog("open");
         return;
     }
     else{
+    	//是否确认删除弹出框
         openPromptDel();
     }
 }
