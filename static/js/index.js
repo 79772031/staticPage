@@ -69,7 +69,7 @@ function treeOnClick(event, treeId, treeNode) {
     bxxgl()
   } else if (treeNode.id === '6') {
     sxxxgl()
-  } else{
+  } else {
     hidden()
   }
 }
