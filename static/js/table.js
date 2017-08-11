@@ -289,7 +289,8 @@ function sxwhhjck(){
         height: 600,
         closed: false,
         cache: false,
-        modal: true
+        modal: true,
+        draggable: false
     });
     $('#sxwhhjck').datagrid({
         url: '../data/sxwhhjck.json',
@@ -357,7 +358,8 @@ function  lsbbck(){
         height: 600,
         closed: false,
         cache: false,
-        modal: true
+        modal: true,
+        draggable: false
     });
     $('#lsbbck').datagrid({
         url: '../data/sxxxgl.json',
@@ -445,7 +447,8 @@ function  workLogging(){
         height: 600,
         closed: false,
         cache: false,
-        modal: true
+        modal: true,
+        draggable: false
     });
     $('#gzjlck').datagrid({
         url: '../data/gzjlck.json',
