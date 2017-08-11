@@ -128,7 +128,6 @@ function closeFeedBack() {
 // 意见反馈弹框弹出方法
 function showFeedBack() {
 	$('#dlgList').dialog('open')
-	queryListAction()
 }
 
 function addFeedBack() {
