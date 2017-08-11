@@ -24,29 +24,16 @@ var setting = {
     autoParam: ['id'],
     dataFilter: null
   },
-  edit: {
-    drag: {
-      autoExpandTrigger: true,
-      prev: true,
-      inner: false,
-      next: true
-    },
-    enable: true,
-    showRemoveBtn: false,
-    showRenameBtn: false
-  },
   data: {
-    keep: {
-      parent: true,
-      leaf: true
-    },
     simpleData: {
       enable: true
     }
   },
   callback: {
     onAsyncSuccess: toChangeMinusSign,
-    onClick: treeOnClick
+    onClick: treeOnClick,
+    onExpand: onExpand,
+    onCollapse: onCollapse
   }
 }
 function addDiyDom(treeId, treeNode) {
@@ -59,17 +46,25 @@ function addDiyDom(treeId, treeNode) {
     $('#excel' + treeNode.tId).bind('click', function() { alert('导出excel' + treeNode.tId) })
   }
 }
-
+function onExpand(event, treeId, treeNode) {
+  if ($('#' + treeNode.tId + '_a').hasClass('fixTree')) {
+    $('#' + treeNode.tId + '_switch').addClass('fixTree')
+  }
+}
+function onCollapse(event, treeId, treeNode) {
+  if ($('#' + treeNode.tId + '_a').hasClass('fixTree')) {
+    $('#' + treeNode.tId + '_switch').addClass('fixTree')
+  }
+}
 function treeOnClick(event, treeId, treeNode) {
   if (cacheNode) {
-    $('#' + cacheNode.tId + '_a').addClass('fixTree')
-    $('#' + cacheNode.tId + '_switch').addClass('fixTree')
-    $('#word' + cacheNode.tId).addClass('fixTree')
-    $('#excel' + cacheNode.tId).addClass('fixTree')
+    $('#' + cacheNode.tId + '_a').removeClass('fixTree')
+    $('#' + cacheNode.tId + '_switch').removeClass('fixTree')
+    $('#word' + cacheNode.tId).removeClass('fixTree')
+    $('#excel' + cacheNode.tId).removeClass('fixTree')
   }
   var $fixDiv = $('#fixDiv')
-  var fixHeight = event.target.offsetTop - 6
-  console.log(event)
+  var fixHeight = event.target.offsetTop - 7
   $fixDiv.addClass('fixDiv')
   $fixDiv.css({top: fixHeight})
   $('#' + treeNode.tId + '_a').addClass('fixTree')
