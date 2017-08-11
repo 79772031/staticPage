@@ -790,3 +790,7 @@ p {
     background: #334a5c;
     z-index: 10;
 }
+.fixTree {
+    position: relative;
+    z-index: 12;
+}

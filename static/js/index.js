@@ -5,7 +5,7 @@ layui.use('layer', function () {
 })
 
 var treeSpan = '#ffffff', windowHeight = $(window).height(), tabelHeight = windowHeight - 145, windowWidth = $(window).width(),
-  tableWidth = windowWidth - 279
+  tableWidth = windowWidth - 279, cacheNode
 $('#children-table').height(tabelHeight)
 $('#right').width(tableWidth)
 
@@ -52,20 +52,30 @@ var setting = {
 function addDiyDom(treeId, treeNode) {
   if (treeNode.id === '4') {
     var aObj = $('#' + treeNode.tId)
-    var editStr = '<span class="exportIcon" id="word' + treeNode.id + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button word"></span></span>' +
-    '<span class="exportIcon" id="excel' + treeNode.id + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button excel"></span></span>'
+    var editStr = '<span class="exportIcon" id="word' + treeNode.tId + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button word"></span></span>' +
+    '<span class="exportIcon" id="excel' + treeNode.tId + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button excel"></span></span>'
     aObj.append(editStr)
-    $('#word' + treeNode.id).bind('click', function() { alert('导出word' + treeNode.id) })
-    $('#excel' + treeNode.id).bind('click', function() { alert('导出excel' + treeNode.id) })
+    $('#word' + treeNode.tId).bind('click', function() { alert('导出word' + treeNode.tId) })
+    $('#excel' + treeNode.tId).bind('click', function() { alert('导出excel' + treeNode.tId) })
   }
 }
 
 function treeOnClick(event, treeId, treeNode) {
-  // var $fixDiv = $('#fixDiv')
-  // var fixHeight = event.target.offsetTop - 5
-  // console.log(event)
-  // $fixDiv.addClass('fixDiv')
-  // $fixDiv.css({top: fixHeight})
+  if (cacheNode) {
+    $('#' + cacheNode.tId + '_a').addClass('fixTree')
+    $('#' + cacheNode.tId + '_switch').addClass('fixTree')
+    $('#word' + cacheNode.tId).addClass('fixTree')
+    $('#excel' + cacheNode.tId).addClass('fixTree')
+  }
+  var $fixDiv = $('#fixDiv')
+  var fixHeight = event.target.offsetTop - 6
+  console.log(event)
+  $fixDiv.addClass('fixDiv')
+  $fixDiv.css({top: fixHeight})
+  $('#' + treeNode.tId + '_a').addClass('fixTree')
+  $('#' + treeNode.tId + '_switch').addClass('fixTree')
+  $('#word' + treeNode.tId).addClass('fixTree')
+  $('#excel' + treeNode.tId).addClass('fixTree')
   if (treeNode.id === '2') {
     jghsjwd()
   } else if (treeNode.id === '3') {
@@ -77,6 +87,7 @@ function treeOnClick(event, treeId, treeNode) {
   } else {
     hidden()
   }
+  cacheNode = treeNode
 }
 function toChangeMinusSign(event, treeId, treeNode, msg) {}
 
