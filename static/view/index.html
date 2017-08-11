@@ -484,7 +484,7 @@
 <!--    上面删除按钮旁边的 意见反馈按钮 新增意见反馈 -->
 <div id="dlgfeedback" class="easyui-dialog" title="意见反馈"
 	 data-options="closed:true,draggable: false" style="width: 670px; height: 533px;top:120px;">
-	<form id="feedBackForm" method="post" style="width: 655px; height: 460px;margin: 0px auto;padding: 0px;">
+	<form id="feedBackForm" method="post" style="width: 655px; height: 450px;margin: 0px auto;padding: 0px;">
 		<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: 0px;">
 			<tr>
 				<td class="textright"><label>问题分类:</label></td>
@@ -599,26 +599,26 @@
 			  action="/SimpleProject/feedback/exportData">
 			<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: auto;">
 				<tr>
-					<td class="textright"><label>影响等级：</label></td>
+					<td class="textright"><label>影响等级:</label></td>
 					<td class="textleft pl10"><select
-							class="easyui-combobox dialog-table-select134">
+							class="easyui-combobox dialog-table-select146">
 						<option value="">全部</option>
 						<option value="1">严重</option>
 						<option value="2">一般</option>
 						<option value="3">轻微</option>
 					</select></td>
-					<td class="textright pl30"><label>反馈人：</label></td>
+					<td class="textright pl30"><label>反馈人:</label></td>
 					<td class="textleft pl10"><input data-options="prompt:'请输入反馈人'"
-													 class="easyui-textbox dialog-table-input131" type="text"></td>
-					<td class="textright pl30"><label>反馈单位：</label></td>
+													 class="easyui-textbox dialog-table-input143" type="text"></td>
+					<td class="textright pl30"><label>反馈单位:</label></td>
 					<td class="textleft pl10"><input data-options="prompt:'请输入反馈单位'"
-													 class="easyui-textbox dialog-table-input131" type="text"></td>
+													 class="easyui-textbox dialog-table-input143" type="text"></td>
 				</tr>
 				<tr>
-					<td class="textright"><label>反馈时间：</label></td>
+					<td class="textright"><label>反馈时间:</label></td>
 					<td colspan="3" class="textleft pl10"><input id="questionStartTime"
-																 class="easyui-datebox dialog-table-input131" value="0001-01-01"><label class="textleft pl10 pr5" style="margin-right: 0px;">至</label>
-						<input class="easyui-datebox dialog-table-input131" id="questionEndTime"
+																 class="easyui-datebox dialog-table-input143" value="0001-01-01"><label class="textleft pl10 pr5" style="margin-right: 0px;">至</label>
+						<input class="easyui-datebox dialog-table-input135" id="questionEndTime"
 							   value="9999-12-31"></td>
 					<td colspan="2" style="text-align: right;">
 						<button type="button" style="margin-right: 4px;" onclick=""
@@ -631,7 +631,7 @@
 	</div>
 	<div class="pl3 dialog_table_for_index" style="margin: 0px auto">
 		<table class="easyui-datagrid" id="dgListFeedBack"
-			   data-options="striped:true,fitColumns:true" style="width: 720px; height: 315px;">
+			   data-options="striped:true,fitColumns:true" style="width: 720px; height: 316px;">
 			<thead>
 			<tr>
 				<th
