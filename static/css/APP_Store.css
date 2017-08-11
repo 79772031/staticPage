@@ -614,6 +614,7 @@ p {
     line-height:32px;
     color: #ffffff;
     margin-left: 4px;
+    margin-bottom: 2px;
     vertical-align: middle;
     outline: none;
 }
