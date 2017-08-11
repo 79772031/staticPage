@@ -289,12 +289,6 @@ p {
     color: #333333;
 }
 
-.textbox .textbox-text {
-    font-size: 16px;
-
-    background: #ffffff;
-}
-
 .textbox {
     border: 1px solid #bebebe;
     background-color: #f9f9f9;
@@ -682,7 +676,7 @@ p {
     z-index: 9;
     color: #FFFFFF;
     background-color: #1bab8f;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: -2px 2px 5px 3px rgba(7, 17, 27, 0.1);
 }
 
