@@ -128,7 +128,6 @@ function closeFeedBack() {
 // 意见反馈弹框弹出方法
 function showFeedBack() {
 	$('#dlgList').dialog('open')
-	queryListAction()
 }
 
 function addFeedBack() {
@@ -143,20 +142,6 @@ function formatterIndex(value, rowData, rowIndex) {
 
 // 假数据
 var data = [ {
-	"data1" : 1,
-	"data2" : 1,
-	"data3" : 1,
-	"data4" : 1,
-	"data5" : 1,
-	"data6" : 1
-}, {
-	"data1" : 1,
-	"data2" : 1,
-	"data3" : 1,
-	"data4" : 1,
-	"data5" : 1,
-	"data6" : 1
-}, {
 	"data1" : 1,
 	"data2" : 1,
 	"data3" : 1,
@@ -264,4 +249,71 @@ $('#addQuestionTime').datebox(
  formatterDate(new Date(new Date())))
 }
 
+//新增对象 的编辑按钮点击事件
+function updateObj(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openAddObj();
+    }
+}
+//新增 的编辑按钮点击事件
+function updateTableInfo(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openAddTableInfo() ;
+    }
+}
+//新增属性信息 的编钮点击事件
+function updateAttr(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openAddAttribute() ;
+    }
+}
 
+
+//新增对象 的删除按钮点击事件
+function delectObj(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openPromptDel();
+    }
+}
+//新增 的删除按钮点击事件
+function delectTableInfo(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openPromptDel() ;
+    }
+}
+//新增属性信息 的删除按钮点击事件
+function delectAttr(){
+    var a = $('#sxxxgl').datagrid('getChecked');
+    if (a.length < 1) {
+        $("#dlgPromptChoice").dialog("open");
+        return;
+    }
+    else{
+        openPromptDel();
+    }
+}
