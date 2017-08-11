@@ -777,3 +777,10 @@ p {
     margin-left:20px;
     margin-right:20px;
 }
+.fixDiv {
+    position: fixed;
+    width: 279px;
+    height: 32px;
+    background: #334a5c;
+    z-index: 10;
+}
