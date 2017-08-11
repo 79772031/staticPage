@@ -61,6 +61,11 @@ function addDiyDom(treeId, treeNode) {
 }
 
 function treeOnClick(event, treeId, treeNode) {
+  // var $fixDiv = $('#fixDiv')
+  // var fixHeight = event.target.offsetTop - 5
+  // console.log(event)
+  // $fixDiv.addClass('fixDiv')
+  // $fixDiv.css({top: fixHeight})
   if (treeNode.id === '2') {
     jghsjwd()
   } else if (treeNode.id === '3') {

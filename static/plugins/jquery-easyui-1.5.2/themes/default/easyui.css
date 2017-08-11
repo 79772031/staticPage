@@ -935,12 +935,6 @@
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-}
-.combo-arrow-hover {
-  opacity: 1.0;
-  filter: alpha(opacity=100);
 }
 .combo-panel {
   overflow: auto;
@@ -952,13 +946,13 @@
   background-color: #ffffff;
 }
 .combo-arrow {
-  background-color: #E0ECFF;
+  background-color: #e6e6e6;
 }
 .combo-arrow-hover {
   background-color: #eaf2ff;
 }
 .combo-arrow:hover {
-  background-color: #eaf2ff;
+  /*background-color: #eaf2ff;*/
 }
 .combo .textbox-icon-disabled:hover {
   cursor: default;
