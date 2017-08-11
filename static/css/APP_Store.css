@@ -290,12 +290,18 @@ p {
 }
 
 .textbox {
-    border: 1px solid #bebebe;
-    background-color: #f9f9f9;
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
 }
-
+.textbox .textbox-text {
+    background: #ffffff;
+}
 #formContent {
     visibility: hidden;
+}
+.textbox input{
+    height: 24px;
+    line-height: 24px;
 }
 
 .layui-form-item .layui-inline {
