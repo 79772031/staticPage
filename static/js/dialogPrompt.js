@@ -117,7 +117,9 @@ function closePromptFail() {
 // 打开上面的 意见反馈按钮
 function opendFeedBack() {
     $("#dlgfeedback").dialog("open");
+    //清空表单
     $("#feedBackForm").form('clear');
+    //初始化日期
     setDate()
 }
 // 关闭 上面的 意见反馈按钮
@@ -129,14 +131,18 @@ function closeFeedBack() {
 // 意见反馈汇总的 弹出框弹出方法
 function showFeedBack() {
     $('#dlgList').dialog('open')
+    //清空表单
     $("#ffList").form('clear')
+    //初始化日期
     setDate()
 }
 
 // 右悬浮的位置的 新增意见反馈弹出框
 function addFeedBack() {
     $('#dlginsert').dialog('open')
+    //清空表单
     $("#InsertFeedBack").form('clear')
+    //初始化日期
     setDate()
 }
 // table生成序号（即行号） 的方法
