@@ -49,11 +49,15 @@ function addDiyDom(treeId, treeNode) {
 function onExpand(event, treeId, treeNode) {
   if ($('#' + treeNode.tId + '_a').hasClass('fixTree')) {
     $('#' + treeNode.tId + '_switch').addClass('fixTree')
+  } else {
+    $('#fixDiv').removeClass('fixDiv')
   }
 }
 function onCollapse(event, treeId, treeNode) {
   if ($('#' + treeNode.tId + '_a').hasClass('fixTree')) {
     $('#' + treeNode.tId + '_switch').addClass('fixTree')
+  } else {
+    $('#fixDiv').removeClass('fixDiv')
   }
 }
 function treeOnClick(event, treeId, treeNode) {
