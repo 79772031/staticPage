@@ -5,16 +5,17 @@ layui.use('layer', function () {
 })
 
 var treeSpan = '#ffffff', windowHeight = $(window).height(), tabelHeight = windowHeight - 145, windowWidth = $(window).width(),
-  tableWidth = windowWidth - 279, cacheNode
+  tableWidth = windowWidth - 279, cacheNode, HoverDomFlag = 0
 $('#children-table').height(tabelHeight)
 $('#right').width(tableWidth)
 
 var setting = {
   view: {
-    addDiyDom: addDiyDom,
     dblClickExpand: false,
     fontCss: {color: treeSpan},
     showLine: false,
+    addHoverDom: addHoverDom,
+    removeHoverDom: removeHoverDom,
     showIcon: false
   },
   async: {
@@ -36,16 +37,25 @@ var setting = {
     onCollapse: onCollapse
   }
 }
-function addDiyDom(treeId, treeNode) {
-  if (treeNode.id === '4') {
+function addHoverDom(treeId, treeNode) {
+  if (treeNode.id === '4' && HoverDomFlag === 0) {
     var aObj = $('#' + treeNode.tId)
-    var editStr = '<span class="exportIcon" id="word' + treeNode.tId + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button word"></span></span>' +
-    '<span class="exportIcon" id="excel' + treeNode.tId + '" title="' + treeNode.name + '" onfocus="this.blur();"><span class="button excel"></span></span>'
+    var editStr = '<span class="exportIcon" id="word' + treeNode.tId + '" title="导出Word" onfocus="this.blur();"><span class="button word"></span></span>' +
+    '<span class="exportIcon" id="excel' + treeNode.tId + '" title="导出Excel" onfocus="this.blur();"><span class="button excel"></span></span>'
     aObj.append(editStr)
     $('#word' + treeNode.tId).bind('click', function() { alert('导出word' + treeNode.tId) })
     $('#excel' + treeNode.tId).bind('click', function() { alert('导出excel' + treeNode.tId) })
+    HoverDomFlag = 1
   }
 }
+function removeHoverDom(treeId, treeNode) {
+  if (treeNode.id === '4') {
+    $('#word' + treeNode.tId).unbind().remove()
+    $('#excel' + treeNode.tId).unbind().remove()
+    HoverDomFlag = 0
+  }
+}
+
 function onExpand(event, treeId, treeNode) {
   if ($('#' + treeNode.tId + '_a').hasClass('fixTree')) {
     $('#' + treeNode.tId + '_switch').addClass('fixTree')
