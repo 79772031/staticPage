@@ -290,7 +290,7 @@ function sxwhhjck(){
         closed: false,
         cache: false,
         modal: true,
-        draggable: false
+        //draggable: false
     });
     $('#sxwhhjck').datagrid({
         url: '../data/sxwhhjck.json',
@@ -359,7 +359,7 @@ function  lsbbck(){
         closed: false,
         cache: false,
         modal: true,
-        draggable: false
+        ////draggable: false
     });
     $('#lsbbck').datagrid({
         url: '../data/sxxxgl.json',
@@ -447,14 +447,14 @@ function  workLogging(){
         closed: false,
         cache: false,
         modal: true,
-        draggable: false
+        //draggable: false
     });
     $('#gzjlck').datagrid({
         url: '../data/gzjlck.json',
         cache:false,
         pagination: true,
         method: 'get',
-       height:510,
+        height:510,
         striped:true,
         columns:[[
             {
