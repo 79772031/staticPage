@@ -579,7 +579,7 @@
 			</tr>
 			<tr>
 				<td class="textright"><label>反馈时间:</label></td>
-				<td class="textleft pl10"><input
+				<td class="textleft pl10"><input  id="feedBackTime"
 						class="easyui-datebox dialog-table-input226" type="text"></td>
 			</tr>
 			<tr>
@@ -594,7 +594,7 @@
 <!-- 上面删除按钮旁边的 意见反馈按钮 新增意见反馈统计弹出框结尾 -->
 
 <!-- 意见反馈列表弹出框开始 -->
-<div id="dlgList" class="easyui-dialog" title="意见反馈"
+<div id="dlgList" class="easyui-dialog" title="反馈汇总"
 	 data-options="closed:true,draggable: false" style="width: 740px; height: 460px;top:120px;">
 	<div style="margin: 0; padding: 0;">
 		<form id="ffList" method="post" style="margin: 0px auto;padding: 0px;"
@@ -602,7 +602,7 @@
 			<table style="border-collapse: separate; border-spacing: 0px 8px;margin: 0px auto;padding: auto;">
 				<tr>
 					<td class="textright"><label>影响等级:</label></td>
-					<td class="textleft pl10"><select
+					<td class="textleft pl10"><select data-options="panelHeight:'auto',editable:false" id="effectLevel"
 							class="easyui-combobox dialog-table-select146">
 						<option value="">全部</option>
 						<option value="1">严重</option>
